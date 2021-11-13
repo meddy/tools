@@ -1,5 +1,6 @@
 import type { NextPage } from "next";
 import Head from "next/head";
+import Link from "next/link";
 import styles from "../styles/Home.module.css";
 
 const Home: NextPage = () => {
@@ -14,25 +15,33 @@ const Home: NextPage = () => {
         <h1 className={styles.title}>Tools</h1>
 
         <div className={styles.grid}>
-          <a href="/json-formatter" className={styles.card}>
-            <div>JSON Formatter</div>
-            <div>&rarr;</div>
-          </a>
+          <Link href="/json-formatter">
+            <a className={styles.card}>
+              <div>JSON Formatter</div>
+              <div>&rarr;</div>
+            </a>
+          </Link>
 
-          <a href="/url-encoder" className={styles.card}>
-            <div>URL Decode/Encode</div>
-            <div>&rarr;</div>
-          </a>
+          <Link href="/url-encoder">
+            <a className={styles.card}>
+              <div>URL Decode/Encode</div>
+              <div>&rarr;</div>
+            </a>
+          </Link>
 
-          <a href="/diff-checker" className={styles.card}>
-            <div>Diff Checker</div>
-            <div>&rarr;</div>
-          </a>
+          <Link href="/diff-checker">
+            <a className={styles.card}>
+              <div>Diff Checker</div>
+              <div>&rarr;</div>
+            </a>
+          </Link>
 
-          <a href="/alphabetizer" className={styles.card}>
-            <div>Alphabetizer</div>
-            <div>&rarr;</div>
-          </a>
+          <Link href="/alphabetizer">
+            <a className={styles.card}>
+              <div>Alphabetizer</div>
+              <div>&rarr;</div>
+            </a>
+          </Link>
         </div>
       </main>
 
