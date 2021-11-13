@@ -1,6 +1,5 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import Image from "next/image";
 import styles from "../styles/Home.module.css";
 
 const Home: NextPage = () => {
@@ -16,19 +15,23 @@ const Home: NextPage = () => {
 
         <div className={styles.grid}>
           <a href="/json-formatter" className={styles.card}>
-            <h2>JSON Formatter &rarr;</h2>
+            <div>JSON Formatter</div>
+            <div>&rarr;</div>
           </a>
 
           <a href="/url-encoder" className={styles.card}>
-            <h2>URL Decode/Encode &rarr;</h2>
+            <div>URL Decode/Encode</div>
+            <div>&rarr;</div>
           </a>
 
           <a href="/diff-checker" className={styles.card}>
-            <h2>Diff Checker &rarr;</h2>
+            <div>Diff Checker</div>
+            <div>&rarr;</div>
           </a>
 
           <a href="/alphabetizer" className={styles.card}>
-            <h2>Alphabetizer &rarr;</h2>
+            <div>Alphabetizer</div>
+            <div>&rarr;</div>
           </a>
         </div>
       </main>
@@ -39,7 +42,7 @@ const Home: NextPage = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Source
+          Github &#8599;
         </a>
       </footer>
     </div>
