@@ -9,6 +9,19 @@ import styles from "../styles/JsonFormatter.module.css";
 const JsonFormatter: NextPage = () => {
   const [value, setValue] = useState("");
   const [isInvalid, setIsInvalid] = useState(false);
+
+  const handleFormat = (stringify: (json: any) => string) => () => {
+    if (value === "") {
+      return;
+    }
+
+    try {
+      setValue(stringify(JSON.parse(value)));
+    } catch (error) {
+      setIsInvalid(true);
+    }
+  };
+
   return (
     <div className={styles.container}>
       <Head>
@@ -20,9 +33,11 @@ const JsonFormatter: NextPage = () => {
           <a>&larr; Tools</a>
         </Link>
         <h1>JSON Formatter</h1>
-        {isInvalid && <div className={styles.errorMsg}>Invalid JSON</div>}
+        <div className={clsx(styles.errorMsg, { [styles.hidden]: !isInvalid })}>
+          Invalid JSON
+        </div>
         <textarea
-          className={styles.input}
+          className={clsx(styles.input, { [styles.error]: isInvalid })}
           onChange={(event) => {
             setValue(event.target.value);
             if (isInvalid) {
@@ -33,26 +48,14 @@ const JsonFormatter: NextPage = () => {
         />
         <div>
           <button
-            onClick={() => {
-              try {
-                const json = JSON.parse(value);
-                setValue(JSON.stringify(json, null, 2));
-              } catch (error) {
-                setIsInvalid(true);
-              }
-            }}
+            className={styles.control}
+            onClick={handleFormat((json) => JSON.stringify(json, null, 2))}
           >
             Pretty
           </button>
           <button
-            onClick={() => {
-              try {
-                const json = JSON.parse(value);
-                setValue(JSON.stringify(json));
-              } catch (error) {
-                setIsInvalid(true);
-              }
-            }}
+            className={styles.control}
+            onClick={handleFormat((json) => JSON.stringify(json))}
           >
             Compact
           </button>

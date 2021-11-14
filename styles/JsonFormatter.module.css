@@ -11,6 +11,7 @@
 
 .input {
   height: 320px;
+  margin-bottom: 0.5rem;
   width: 100%;
 }
 
@@ -18,6 +19,14 @@
   border-color: darkred;
 }
 
-.error-msg {
+.errorMsg {
   color: darkred;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.control {
+  margin-right: 0.5rem;
 }
