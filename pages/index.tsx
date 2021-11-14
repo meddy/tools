@@ -1,6 +1,7 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
+
 import styles from "../styles/Home.module.css";
 
 const Home: NextPage = () => {
@@ -8,7 +9,7 @@ const Home: NextPage = () => {
     <div className={styles.container}>
       <Head>
         <title>Tools</title>
-        <link rel="icon" href="/favicon.ico" />
+        <link href="/favicon.ico" rel="icon" />
       </Head>
 
       <main className={styles.main}>
@@ -48,8 +49,8 @@ const Home: NextPage = () => {
       <footer className={styles.footer}>
         <a
           href="https://github.com/meddy/tools"
-          target="_blank"
           rel="noopener noreferrer"
+          target="_blank"
         >
           Github &#8599;
         </a>

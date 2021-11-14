@@ -1,7 +1,9 @@
+import clsx from "clsx";
 import type { NextPage } from "next";
-import { useState } from "react";
 import Head from "next/head";
 import Link from "next/link";
+import { useState } from "react";
+
 import styles from "../styles/JsonFormatter.module.css";
 
 const JsonFormatter: NextPage = () => {
@@ -11,23 +13,23 @@ const JsonFormatter: NextPage = () => {
     <div className={styles.container}>
       <Head>
         <title>JSON Formatter</title>
-        <link rel="icon" href="/favicon.ico" />
+        <link href="/favicon.ico" rel="icon" />
       </Head>
       <main className={styles.main}>
         <Link href="/">
           <a>&larr; Tools</a>
         </Link>
         <h1>JSON Formatter</h1>
-        {isInvalid && <div>Invalid JSON</div>}
+        {isInvalid && <div className={styles.errorMsg}>Invalid JSON</div>}
         <textarea
           className={styles.input}
-          value={value}
           onChange={(event) => {
             setValue(event.target.value);
             if (isInvalid) {
               setIsInvalid(false);
             }
           }}
+          value={value}
         />
         <div>
           <button
