@@ -23,9 +23,9 @@ const Home: NextPage = () => {
             </a>
           </Link>
 
-          <Link href="/url-encoder">
+          <Link href="/uri-encoder">
             <a className={styles.card}>
-              <div>URL Decode/Encode</div>
+              <div>URI Decode/Encode</div>
               <div>&rarr;</div>
             </a>
           </Link>

@@ -4,7 +4,7 @@ import Head from "next/head";
 import Link from "next/link";
 import { useState } from "react";
 
-import styles from "../styles/JsonFormatter.module.css";
+import styles from "../styles/Tool.module.css";
 
 const JsonFormatter: NextPage = () => {
   const [value, setValue] = useState("");
