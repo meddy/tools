@@ -16,32 +16,14 @@ const Home: NextPage = () => {
         <h1 className={styles.title}>Tools</h1>
 
         <div className={styles.grid}>
-          <Link href="/json-formatter">
-            <a className={styles.card}>
-              <div>JSON Formatter</div>
-              <div>&rarr;</div>
-            </a>
+          <Link className={styles.card} href="/json-formatter">
+            <div>JSON Formatter</div>
+            <div>&rarr;</div>
           </Link>
 
-          <Link href="/uri-encoder">
-            <a className={styles.card}>
-              <div>URI Decode/Encode</div>
-              <div>&rarr;</div>
-            </a>
-          </Link>
-
-          <Link href="/diff-checker">
-            <a className={styles.card}>
-              <div>Diff Checker</div>
-              <div>&rarr;</div>
-            </a>
-          </Link>
-
-          <Link href="/alphabetizer">
-            <a className={styles.card}>
-              <div>Alphabetizer</div>
-              <div>&rarr;</div>
-            </a>
+          <Link className={styles.card} href="/uri-encoder">
+            <div>URI Decode/Encode</div>
+            <div>&rarr;</div>
           </Link>
         </div>
       </main>

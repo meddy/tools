@@ -15,9 +15,7 @@ const UriEncoder: NextPage = () => {
         <link href="/favicon.ico" rel="icon" />
       </Head>
       <main className={styles.main}>
-        <Link href="/">
-          <a>&larr; Tools</a>
-        </Link>
+        <Link href="/">&larr; Tools</Link>
         <h1>URI Encoder</h1>
         <textarea
           className={styles.input}

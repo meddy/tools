@@ -29,9 +29,7 @@ const JsonFormatter: NextPage = () => {
         <link href="/favicon.ico" rel="icon" />
       </Head>
       <main className={styles.main}>
-        <Link href="/">
-          <a>&larr; Tools</a>
-        </Link>
+        <Link href="/">&larr; Tools</Link>
         <h1>JSON Formatter</h1>
         <div className={clsx(styles.errorMsg, { [styles.hidden]: !isInvalid })}>
           Invalid JSON
