@@ -26,7 +26,7 @@ const Home: NextPage = () => {
             <div>&rarr;</div>
           </Link>
 
-          <Link className={styles.card} href="/kg2lb/0">
+          <Link className={styles.card} href="/kg2lb">
             <div>KG to LB</div>
             <div>&rarr;</div>
           </Link>
