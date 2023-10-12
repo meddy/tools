@@ -25,6 +25,11 @@ const Home: NextPage = () => {
             <div>URI Decode/Encode</div>
             <div>&rarr;</div>
           </Link>
+
+          <Link className={styles.card} href="/kg2lb/0">
+            <div>KG to LB</div>
+            <div>&rarr;</div>
+          </Link>
         </div>
       </main>
 
