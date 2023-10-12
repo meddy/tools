@@ -8,12 +8,12 @@ const KgConverter: NextPage = () => {
   const router = useRouter();
   const [value, setValue] = useState(0);
 
-  const { slug } = router.query;
   useEffect(() => {
-    if (slug && !isNaN(Number(slug))) {
-      setValue(Number(slug));
+    const urlValue = Number(router.query.value);
+    if (!isNaN(urlValue)) {
+      setValue(urlValue);
     }
-  }, [slug]);
+  }, [router.query.value]);
 
   return (
     <ToolLayout title="KG to LB">
